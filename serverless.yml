@@ -1,0 +1,20 @@
+service: aws-lambda-typescript-start-fib-process
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-dotenv-plugin
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: dev
+  region: eu-central-1
+
+functions:
+  startFib:
+    handler: index.startFib
+    events:
+      - http:
+          path: /
+          method: get
