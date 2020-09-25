@@ -1,4 +1,4 @@
-service: aws-lambda-typescript-start-fib-process
+service: fib-starter
 
 plugins:
   - serverless-plugin-typescript
